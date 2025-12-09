@@ -73,7 +73,7 @@ figure{width: 501px; height: 374px; margin-right: 81px;}
 .section3 ul li span.s3t{font-size: 20px; font-weight: 400; margin-bottom: 10px; display: block;}
 .section3 ul li p{font-size: 18px; letter-spacing: -0.04em;}
 
-footer{background: #0C2440; padding:77px 0; display: flex; gap:80px; justify-content: center;}
+footer{background: #0C2440; padding:77px 0; display: flex; gap:4vw; justify-content: center;}
 footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
 
 
@@ -105,6 +105,7 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
 
     .hero .herobox{width: 380px; height: 200px; left: 28%; bottom: 15%; padding-left: 12px;}
     .hero .herobox .t_btn .herot3{display: none;}
+    
 
    
 
@@ -120,6 +121,11 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
     .hero .btn{font-size: 11px; width: 100px; height: 30px;}
     
     .section1 .container{margin-left: 30px;}
+
+    footer{flex-direction: column; align-items: center;}
+    footer > img{width: 126px; height:35px;}
+
+    
 
     
 }
