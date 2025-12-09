@@ -35,7 +35,7 @@ header .gnb li .lnb li:hover a{color: #FFF;}
 header .btnheader{padding: 9px 1.8vw; border: 1px solid #368CF0; background: rgba(255, 255, 255, 0.2); backdrop-filter:blur(5px);}
 
 .hero{position: relative;}
-.hero .herobox{position: absolute; z-index: 2; right: 15%; bottom:40%; background: rgba(233, 232, 232, 0.5); width: 568px; height: 286px;
+.hero .herobox{position: absolute; z-index: 2; right: 15%; bottom:35%; background: rgba(233, 232, 232, 0.5); width: 568px; height: 286px;
 display: flex; flex-direction: column; justify-content: center; padding-left: 34px;}
 .herobox .herot1{font-size: 18px; letter-spacing: -0.09em; font-weight: 300; }
 .herobox .herot2{font-size: 60px; color: #0C2440; font-weight: 600;  margin-bottom: 10px;}
@@ -50,18 +50,18 @@ figure{width: 501px; height: 374px; margin-right: 81px;}
 .section1 .text_set h3 span{font-size: 40px; font-weight: 600; color: #0C2440;}
 .section1 .text_set p{font-size: 22px; letter-spacing: -0.02em; margin: 25px 0 37px;}
 
-.section2{max-width: 1940px; height: 685px; display: flex; margin: 0 auto;}
-.section2 .left{width: 50%; height: 100%; background: url(../images/section2-1.png);}
-.section2 .left ul{display: flex; flex-direction: column; gap: 2.3vw; justify-content: center; margin-right: 3.6vw; height: 100%; border: 1px solid #000; }
+.section2{max-width: 1920px; min-height: 685px; display: flex; margin: 0 auto; }
+.section2 .left{width: 50vw; background:url(../images/section2-1.png); display: flex; justify-content: end; height: 685px;}
+.section2 .left ul{display: flex;  flex-direction: column; gap: 2.3vw; justify-content: center; margin-right: 3.6vw; width: 570px; }  
 .section2 .left ul li{display: flex; align-items: center; }
-.section2 .left ul li figure{ width: 115px; height: 115px; background: #4E5F73; display: flex; align-items: center; justify-content: center; margin-right: 0; border-radius: 5px;}
+.section2 .left ul li figure{ width:115px; height: 115px; background: #4E5F73; display: flex; align-items: center; justify-content: center; margin-right: 0; border-radius: 5px;}
 .section2 .left ul li .s2ltext{margin-left: 20px;}
 .section2 .left ul li .s2ltext .title{font-size: 20px; font-weight: 400; margin-bottom: 20px; letter-spacing: -0.02em;}
 .section2 .left ul li .s2ltext p{font-size: 18px; line-height: 1.3em;}
 
-.section2 .right{width: 50%; height: 100%; background:#0C2440; color: #f4f4f4;}
+.section2 .right{width: 50vw; height: 685px; background:#0C2440; color: #f4f4f4;}
 .section2 .right .s2rtitle{font-size: 40px; font-weight: 400; margin: 90px 0 25px 127px; }
-.section2 .right ul li{width: 500px; height: 199px; background: #4E5F73; margin:0 0 34px 127px; box-sizing: border-box; padding: 20px 16px; border-radius: 5px; }
+.section2 .right ul li{width: 500px; height: 199px; background: #4E5F73; margin:0 6vw 34px 6vw; box-sizing: border-box; padding: 20px 16px; border-radius: 5px; }
 .section2 .right ul li .newsti{font-size: 22px; font-weight: 400;}
 .section2 .right ul li span.date{font-size: 18px; opacity: 38%; margin:8px 0 30px; display: inline-block;}
 
@@ -83,7 +83,11 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
     .section1 .container{flex-direction: column;}
     .section1 .container .text_set{display: flex; flex-direction: column; align-items: center;}
 
-
+    .section2{flex-wrap: wrap; justify-content: center;}  
+    .section2 .left{width: 100%; justify-content: center;}
+    .section2 .right{width: 100%; justify-content: center;}
+    .section2 .right .s2rtitle{text-align: center; margin-left: 0;}
+    .section2 .right ul{display: flex; flex-direction: column; align-items: center;}
     .section3 > ul{flex-wrap: wrap; justify-content: center;}
     .section3 > ul > li:nth-child(3){flex-grow: 1;}
     
@@ -99,7 +103,7 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
     header .nav:hover .lnbbg{position: absolute; left: 0; top: 120px;  }
     header .btnheader{font-size: 14px; padding: 3px 1vw; position: absolute; top: 1vw; right: 1vw;}
 
-    .hero .herobox{width: 380px; height: 220px; left: 28%; padding-left: 12px;}
+    .hero .herobox{width: 380px; height: 200px; left: 28%; bottom: 15%; padding-left: 12px;}
     .hero .herobox .t_btn .herot3{display: none;}
 
    
