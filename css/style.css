@@ -13,27 +13,33 @@ body{font-family: "Noto Sans KR", sans-serif;}
 
 
 
-header{height: 102px; width: 100%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #fff; box-sizing: border-box;
+header{height: 102px; width: 100%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeef7; box-sizing: border-box;
 position: absolute; z-index: 3; padding:0 8vw;}
+header::before{content: ''; width: 100%; height: 100%; position: absolute; z-index: 1; background: linear-gradient(to bottom, rgba(12,36,64,0.5), rgba(12,36,64,0)); top: 0; left: 0;}
+
+
+header h1{position: relative; z-index: 5;}
 header .nav{height: 100%;}
-header .gnb{display: flex; height: 100%; align-items: center;}
+header .gnb{display: flex; height: 100%; align-items: center; position: relative; z-index: 5;}
 header .gnb > li{position: relative; height: 100%;}
 header .gnb > li > a{padding: 0 2vw; display: flex;
-    align-items: center; color: #fff; font-size: 20px; height: 100%;}
+align-items: center; color: #fff; font-size: 20px; height: 100%; white-space: nowrap;}
 header .gnb li .lnb{position: absolute; top: 100px; height: 0; overflow: hidden; transition: 0.3s;} 
 header .gnb li .lnb li{padding: 10px 30px; text-align: center;}
-header .gnb li .lnb li a{color: #CACACA; font-size: 16px;}
+header .gnb li .lnb li a{color: #CACACA; font-size: 16px; white-space: nowrap; border-bottom: 2px solid transparent; transition: .3s; }
 
 
-header .gnb:hover li a{color:#cacaca}
-header .gnb > li:hover > a{color: #fff; transition: 0.3s; border-bottom: 1px solid #0C2440;}
-header .nav:hover .lnbbg{position: absolute; width: 100%; height: 350px; left: 0; top: 102px; background:rgba(12,36,64, 0.7); transition: 0.3s; }
+header .gnb:hover li a{color:#cacaca; transition: 0.2s; }
+header .gnb > li:hover > a{color: #fff; border-bottom: 1px solid #fff;}
+header .nav .lnbbg{position: absolute; top: 0; left: 0; width: 100%; height: 420px;
+transition:0.4s; background:rgba(12,36,64, 0.7); opacity: 0; pointer-events: none;}
+header .nav:hover .lnbbg{opacity: 1; pointer-events: auto;}
 header .gnb:hover li .lnb{width: 100%; height: 350px; transition: 0.3s;}
 header .gnb li .lnb li:hover a{color: #FFF;}
 
 
-header .btnheader{padding: 9px 1.8vw; border: 1px solid #368CF0; background: rgba(255, 255, 255, 0.2); backdrop-filter:blur(5px);}
-
+header .btnheader{padding: 9px 1.8vw; border: 1px solid #368CF0; background: rgba(255, 255, 255, 0.2); backdrop-filter:blur(5px); position: relative; z-index: 5; transition:color 0.2s;color: #000;}
+header:hover .btnheader{color: #eaeef7; }
 .hero{position: relative;}
 .hero .herobox{position: absolute; z-index: 2; left: 70%; top:54%; transform: translate(-50%,-50%); background: rgba(233, 232, 232, 0.5); width: 568px; height: 286px;
 display: flex; flex-direction: column; justify-content: center; padding-left: 34px;}
