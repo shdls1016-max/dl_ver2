@@ -10,6 +10,8 @@
 body{font-family: "Noto Sans KR", sans-serif;}
 .btn{color: #fff; width: 150px; height: 40px; background: #0C2440; font-size: 14px; display: flex; align-items: center; border-radius:1px ; justify-content: center; transition:0.2s;}
 .btn:hover{background: #091c32;} 
+.mo{display: none;}
+
 
 
 
@@ -19,7 +21,7 @@ header::before{content: ''; width: 100%; height: 100%; position: absolute; z-ind
 
 
 header h1{position: relative; z-index: 5; width: 7vw; height: auto; flex: 0 0 auto; }
-header h1 img{width: 100%; height: 100%; object-fit: contain; object-position: top left;}
+header h1 img{width: 100%; height: 100%; object-fit: contain; object-position: top left; }
 header .nav{height: 100%;  flex: 1 1 auto; min-width: 0; display: flex; justify-content: center;}
 header .gnb{display: flex; height: 100%; align-items: center; position: relative; z-index: 5;}
 header .gnb > li{position: relative; height: 100%;}
@@ -89,16 +91,58 @@ display: flex; flex-direction: column; justify-content: center; padding-left: 34
 .section3 ul li span.s3t{font-size: 22px; font-weight: 500; margin-bottom: 10px; display: block;}
 .section3 ul li p{font-size: 18px; letter-spacing: -0.04em;}
 
-footer{background: #0C2440; padding:77px 0; display: flex; gap:4vw; justify-content: center;}
+footer{background: #0C2440; padding:4vw 0; display: flex; gap:4vw; justify-content: center;}
 footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
 
 
 
 
 @media screen and (max-width:1100px) {
-    header{padding: 0 1.5rem;}
+    body.no-scroll{overflow: hidden; height: 100vh;}
+
+    header{padding: 0 1.5rem; height:clamp(50px,5.3vw,100px); border-bottom: 0; align-items: start;}
+    header h1{width: auto; height:20px;}
     header .btnheader.pc{display: none; }
-    /* 햄버거 만들기 */
+    /* 햄버거 만들기 버튼은 49행 */
+    .hamburgerBox.mo{display: inline-block;}
+
+    header.on{padding: 0;}
+    header.on h1{margin-left: 1.5rem; }
+    header.on h1.hide{display: none;}
+
+    header .nav{width: 100%; height: 100vh; background: #0c2440; position: fixed; top: 0; left: 100%; z-index: 30; display: flex; justify-content: start; transition: left 0.5s ease; overflow-y: auto;} 
+    header.on .nav{left: 0;}
+    header .nav .gnb{opacity: 0;}
+    header.on .nav .gnb{flex-direction: column; align-items: start; height: auto; margin-top: 20px; padding: 0 1.5rem; opacity: 1;}
+    header.on .nav .gnb > li{height: auto;}
+    header.on .nav .gnb > li > a{display: block; padding: 18px 0; color: #fff; font-size: 18px; height: auto; width: 100%;}
+
+    header .gnb:hover li .lnb {height: auto; width: 100%;}
+    header.on .nav .gnb > li .lnb{position: relative; top: 0; height: auto; max-height: 0; overflow: hidden; transition:max-height 0.4s ease; background: transparent; margin-left: 10px;}
+    header .gnb li .lnb li{text-align: left;}
+    header.on .nav .gnb > li.open .lnb{max-height:300px; margin-bottom: 20px;}
+    header.on .nav .gnb li .lnb li a { color: #cacaca; font-size: 15px;}
+    header.on .nav .gnb li .lnb li:hover a { color: #fff; }
+    header .gnb > li:hover > a{border: 0;}
+
+    header .nav .lnbbg { display: none; }
+
+
+
+    header .hamburgerBox.mo, header.on .hamburgerBox.mo
+    {position: absolute; right: 1.5rem;  z-index: 35;}
+
+.hamburgerBox{width: 32px; height: 32px; position: relative; z-index: 20; margin-top: 10px;}
+.hamburgerBox .hamburger{position: absolute; width: 24px; height: 2.4px; background: #fff; display: inline-block; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.hamburgerBox .hamburger::before,
+.hamburgerBox .hamburger::after
+{content: ''; width: 100%; height: 100%; background: #fff;  transition: transform 0.4s;}
+.hamburgerBox .hamburger::before{position: absolute; top: -8px;}
+.hamburgerBox .hamburger::after{position: absolute; top: 8px;}
+.hamburger.on::before{width: 50%; transform-origin: right; left: auto; right: 0; top: 0; transform: rotate(45deg);}
+.hamburger.on::after{width: 50%; transform-origin: right; left: auto; right: 0; top: 0; transform: rotate(-45deg);}
+
+
 
     .hero .herobox{ width: 440px; left: 50%; top:55%; height: auto; padding: 2.4vw 0 2.4vw 1.8vw;}
     .hero .herobox .herot1{font-size: 14px; line-height: 1;}
@@ -125,12 +169,21 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
 
 @media screen and (max-width:715px) {
     header .gnb{display: none;}
+    header.on .gnb{display: flex;}
     header .nav:hover .lnbbg{display: none;}
     .hero .herobox{width: 280px; height: 150px;}
     .hero .herobox .herot1{font-size: 14px; }
     .hero .herobox .herot2{font-size: 35px;}
     .hero .herobox .t_btn .herot3{display: none;}
     .hero .btn{font-size: 11px; width: 100px; height: 30px;}
+
+/* 
+ .hero .herobox{ width: 440px; left: 50%; top:55%; height: auto; padding: 2.4vw 0 2.4vw 1.8vw;}
+    .hero .herobox .herot1{font-size: 14px; line-height: 1;}
+    .hero .herobox .herot2{font-size: 44px; line-height: 1.2;}
+    .hero .herobox .t_btn .btn{font-size: 14px;}
+    .hero .herobox .t_btn .herot3{font-size: 16px; line-height: 1.6;} */
+
     
     .section1 .container{flex-direction: column; align-items: center;}
     .section1 .container .text_set{display: flex; flex-direction: column; align-items: center;}
@@ -154,8 +207,8 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
     .section3 ul li p{font-size: 16px;}
 
     footer{flex-direction: column; align-items: center;}
-    footer > img{width: 126px; height:35px;}
-
+    footer > img{width: 76px; height:auto;}
+    footer > p{font-size: 12px;}
     
 
     
