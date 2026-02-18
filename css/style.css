@@ -41,7 +41,8 @@ header .gnb:hover li .lnb{width: 100%; height: 350px; transition: 0.3s;}
 header .gnb li .lnb li:hover a{color: #FFF;}
 
 
-header .btnheader{padding: 7px 1.2vw; border: 1px solid #368CF0; background: rgba(255, 255, 255, 0.2); backdrop-filter:blur(5px); position: relative; z-index: 5; transition:color 0.2s;color: #000; font-size: 14px; border-radius: 2px;  flex: 0 0 auto;}
+header .btnheader{padding: 7px 1.2vw; border: 1px solid #368CF0; background: rgba(255, 255, 255, 0.2); backdrop-filter:blur(5px); position: relative; z-index: 5; transition:color 0.2s, background 0.4s;color: #000; font-size: 14px; border-radius: 2px;  flex: 0 0 auto;}
+header .btnheader:hover{background: rgba(255, 255, 255, 0.4);}
 header .nav:hover ~ .btnheader{color: #eaeef7; }
 
 
@@ -244,6 +245,7 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
     .section2 .left ul li .s2ltext .title{font-size: 18px; margin-top: 4%;}
     .section2 .left ul li .s2ltext p{display: none;}
 
+    .section2 .right{justify-content: center;}
     .section2 .right .s2rtitle{font-size: 22px;}
     .section2 .right ul li .newsti{font-size: 18px; display: inline; width: fit-content;}
     .section2 .right ul li .newsti span{display: none;}
