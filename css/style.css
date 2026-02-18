@@ -75,9 +75,9 @@ display: flex; flex-direction: column; justify-content: center; padding-left: 34
 .section2 .left ul li .s2ltext .title{font-size: 20px; font-weight: 500; margin-bottom: 0.4em; letter-spacing: -0.02em;}
 .section2 .left ul li .s2ltext p{font-size: 18px; line-height: 1.4; color: #333;}
 
-.section2 .right{width: 50vw; height: 685px; background:#0C2440; color: #f4f4f4;}
-.section2 .right .s2rtitle{font-size: 40px; font-weight: 500; margin: 90px 0 25px 127px; }
-.section2 .right ul{display: flex; flex-direction: column; align-items: center; gap: 2vw;}
+.section2 .right{width: 50vw; height: 685px; background:#0C2440; color: #f4f4f4; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.section2 .right .s2rtitle{font-size: 40px; font-weight: 500; margin-bottom: 25px;}
+.section2 .right ul{display: flex; flex-direction: column; align-items: center; gap: 2vw; margin: 0 auto;}
 .section2 .right ul li{width: 500px; height: 199px; background: #4E5F73; box-sizing: border-box; padding: 20px 16px; border-radius: 5px; display: flex; flex-direction: column;}
 .section2 .right ul li .newsti{font-size: 22px; font-weight: 400; color: #f4f4f4;} 
 .section2 .right ul li span.date{font-size: 14px; opacity: 38%; margin:4px 0 12px; display: inline-block; line-height: 1;}
@@ -242,10 +242,10 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
     .section1 .text_set p:last-of-type{margin-bottom: 4vw;}
 
     .section2 .left ul li{align-items: start;}
-    .section2 .left ul li .s2ltext .title{font-size: 18px; margin-top: 4%;}
+    .section2 .left ul li .s2ltext .title{font-size: 18px; margin-top: 4%; }
     .section2 .left ul li .s2ltext p{display: none;}
 
-    .section2 .right{justify-content: center;}
+    .section2 .right{display: flex; justify-content: center; align-items: center;}
     .section2 .right .s2rtitle{font-size: 22px;}
     .section2 .right ul li .newsti{font-size: 18px; display: inline; width: fit-content;}
     .section2 .right ul li .newsti span{display: none;}
