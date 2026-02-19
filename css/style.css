@@ -102,23 +102,28 @@ header.sub{background:#0c2440; position: relative;}
 header .gnb > li > a{border-bottom: 2px solid transparent; box-sizing: border-box; }
 header .gnb > li > a.ck{border-bottom: 2px solid #BAC8D8; box-sizing: border-box; }
 header.sub .nav .lnbbg{background:rgba(12,36,64, 1);}
+header.sub .btnheader{color: #eaeef7;}
 
-.hero.sub2-1{height: 23.43vw; width: 100%; background: #000;}
-.hero.sub2-1 > div{border: 1px solid #fff; position: relative; top: 50%; display: flex; align-items: center; justify-content: center; gap: 10%; transform: translateY(-50%);}
+.hero.sub2-1{height: 23.43vw; width: 100%; background:linear-gradient(rgba(12, 36, 64, 0.3), rgba(12, 36, 64, 0.3)), url('../images/sub2-1hero.png') right; background-size: cover; }
+.hero.sub2-1 > div{position: relative; top: 50%; display: flex; align-items: center; justify-content: center; gap: 10%; transform: translateY(-50%);}
 .hero.sub2-1 span{font-size: clamp(40px,4vw,80px); color: #fff;}
 .hero.sub2-1 span:nth-of-type(2){font-size: clamp(22px,1.6vw,40px);}
 
 .bread{display: flex; height: clamp(40px,3.6vw,70px); align-items: center; gap: 10px; padding-left: clamp(20px,2.6vw,50px); border-bottom:1px solid #828282;}
-.bread span{font-size: 16px;}
-.bread figure{width: 16px; height: 16px; overflow: hidden;}
-.bread figure img{width: 100%; height: auto; object-fit: contain; object-position: center;}
+.bread a{font-size: 16px;}
+.bread figure{width: 16px; height: 16px; overflow: hidden; display: flex; align-items: center;}
+.bread figure img{width: 100%; height: auto; object-fit: contain;}
 
 body.sub .sectionbox .section1{height: 690px; width: 80%; display: flex; border: 4px solid red; margin: 130px auto 150px auto; position: relative;}
-body.sub .sectionbox .section1 .left{height: 100%; width: 30%; background: yellow; }
-body.sub .sectionbox .section1 .left span{font-size: 40px; font-weight: 500;}
+body.sub .sectionbox .section1 .left{height: 100%; width: 30%; background: #0C2440; color: #fff;}
+body.sub .sectionbox .section1 .left > span{font-size: 40px; font-weight: 500;}
 body.sub .sectionbox .section1 .left .withLine{font-size: 20px; font-weight: 300; letter-spacing: 0.19em;}  /* 19%여서 0.19em으로 씀 */
 body.sub .sectionbox .section1 .left p{}
-body.sub .sectionbox .section1 .left .slideBtn{}
+body.sub .sectionbox .section1 .left > .slideBtn{background: red;}
+body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-prev{width: 54px; height: 54px; border: 1px solid #000;}
+body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-prev > img{width: 100%; height: auto; }
+body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-next{width: 54px; height: 54px; border: 1px solid #000;}
+body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-next > img{width: 100%; height: auto;}
 body.sub .sectionbox .section1 .right{height: 100%; width: 70%; background: greenyellow; border: 1px solid #000;}
 
 @media screen and (max-width:1100px) {
