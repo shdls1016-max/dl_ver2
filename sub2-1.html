@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL</title>
+    <link rel="stylesheet" href="css/style.css">
+        <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+<body class="sub">
+    <header class="sub">
+       
+        <h1><a href="index.html"><img src="images/logo.png" alt="로고"></a></h1> 
+        <div class="nav">
+                <div class="lnbbg"></div>
+                <ul class="gnb">
+                    <li><a href="#">회사소개</a>
+                        <ul class="lnb">
+                            <li><a href="#">기업정보</a></li>
+                            <li><a href="#">CEO 인사말</a></li>
+                            <li><a href="#">기업연혁</a></li>
+                            <li><a href="#">그룹사현황</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sub2-1.html" class="ck">사업소개</a>
+                        <ul class="lnb">
+                            <li><a href="sub2-1.html">사업개요</a></li>
+                            <li><a href="#">건축</a></li>
+                            <li><a href="#">주택</a></li>
+                            <li><a href="#">토목</a></li>
+                            <li><a href="#">플랜트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">기술혁신</a>
+                        <ul class="lnb">
+                            <li><a href="#">미래기술센터</a></li>
+                            <li><a href="#">기술역량</a></li>
+                            <li><a href="#">지식재산권</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">지속가능경영</a>
+                        <ul class="lnb">
+                            <li><a href="#">정도경영</a></li>
+                            <li><a href="#">상생경영</a></li>
+                            <li><a href="#">품질경영</a></li>
+                            <li><a href="#">안전보건경영</a></li>
+                            <li><a href="#">환경경영</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                            <li><a href="#">지속가능경영보고서</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">투자정보</a>
+                        <ul class="lnb">
+                            <li><a href="#">그룹 highlights</a></li>
+                            <li><a href="#">IR자료실</a></li>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">기업지배구조</a></li>
+                            <li><a href="#">ESG</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">홍보센터</a>
+                        <ul class="lnb">
+                            <li><a href="#">DL소식</a></li>
+                            <li><a href="#">홍보영상</a></li>
+                            <li><a href="#">CI/BI 소개</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+        <a href="#" class="btnheader pc">ADMIN</a>
+        <div class="hamburgerBox mo"><span class="hamburger "></span></div>
+    </header>
+
+    <div class="hero sub2-1">
+        <div>
+            <span>[</span> <span>사업개요</span> <span>]</span>
+        </div>
+
+    </div>
+    <div class="bread">
+        <span>사업소개</span>
+        <figure><img src="" alt="아이콘"></figure> 
+        <span>사업개요</span> 
+    </div>
+
+    <div class="sectionbox">
+        <section class="section1">
+            <div class="left">
+
+            </div>
+
+            <div class="right">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">1</div>
+                    <div class="swiper-slide">2</div>
+                    <div class="swiper-slide">3</div>
+                    <div class="swiper-slide">4</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section2">
+            
+         
+        </section>
+
+        
+    </div>
+
+    <footer>
+        <img src="images/logo.png" alt="">
+        <p> (07800)서울특별시 강서구 공항대로 165 원그로브 A동<br>
+        COPYRIGHT (c) 2021 DL이앤씨 All RIGHTS RESERVED.</p>
+    </footer>
+
+     <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 760px) {
+      .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+        border: 1px solid #000;
+      }
+
+      .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+        border: 1px solid #000;
+      }
+    }
+  </style>  
+
+    <script src="script/jquery-4.0.0.min.js"></script>
+    <script src="script/action.js"></script>
+
+      <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+   var swiper = new Swiper('.swiper', {
+      slidesPerView: 2.5,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+  </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"ec9a6c21600d4161aa74e6a2c77efad2","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+</body>
+</html>
