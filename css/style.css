@@ -97,7 +97,7 @@ footer p{color:#f4f4f4; font-size: 15px; font-weight: 400;}
 
 
 
-/*-------------- sub2-1 ---------------------------- */
+/*--------------------------- sub2-1 ---------------------------- */
 header.sub{background:#0c2440; position: relative;}
 header .gnb > li > a{border-bottom: 2px solid transparent; box-sizing: border-box; }
 header .gnb > li > a.ck{border-bottom: 2px solid #BAC8D8; box-sizing: border-box; }
@@ -114,17 +114,33 @@ header.sub .btnheader{color: #eaeef7;}
 .bread figure{width: 16px; height: 16px; overflow: hidden; display: flex; align-items: center;}
 .bread figure img{width: 100%; height: auto; object-fit: contain;}
 
-body.sub .sectionbox .section1{height: 690px; width: 80%; display: flex; border: 4px solid red; margin: 130px auto 150px auto; position: relative;}
-body.sub .sectionbox .section1 .left{height: 100%; width: 30%; background: #0C2440; color: #fff;}
+body.sub .sectionbox .section1{height: 690px; width: 80%; display: flex; margin: 130px auto 150px auto; position: relative;}
+body.sub .sectionbox .section1 .left{height: 100%; width: 30%; background: #0C2440; color: #fff; position: relative;}
 body.sub .sectionbox .section1 .left > span{font-size: 40px; font-weight: 500;}
 body.sub .sectionbox .section1 .left .withLine{font-size: 20px; font-weight: 300; letter-spacing: 0.19em;}  /* 19%여서 0.19em으로 씀 */
 body.sub .sectionbox .section1 .left p{}
-body.sub .sectionbox .section1 .left > .slideBtn{background: red;}
-body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-prev{width: 54px; height: 54px; border: 1px solid #000;}
+body.sub .sectionbox .section1 .left > .slideBtn{position: absolute; bottom: 3%; right: 5%; display: flex; height: 54px;}
+body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-prev{width: 54px; height: 54px; position: static; margin-top: 0;}
 body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-prev > img{width: 100%; height: auto; }
-body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-next{width: 54px; height: 54px; border: 1px solid #000;}
+body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-next{width: 54px; height: 54px;  position: static; margin-top: 0;}
 body.sub .sectionbox .section1 .left > .slideBtn > .swiper-button-next > img{width: 100%; height: auto;}
+
+body.sub .sectionbox .section1 .swiper-button-disabled {opacity: 0.9;}
+body.sub .sectionbox .section1 .swiper-button-disabled img {opacity: 0.9;}
+
+
 body.sub .sectionbox .section1 .right{height: 100%; width: 70%; background: greenyellow; border: 1px solid #000;}
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:1100px) {
     body.no-scroll{overflow: hidden; height: 100vh;}
