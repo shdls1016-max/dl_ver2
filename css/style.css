@@ -114,6 +114,7 @@ header.sub .btnheader{color: #eaeef7;}
 .bread figure{width: 16px; height: 16px; overflow: hidden; display: flex; align-items: center;}
 .bread figure img{width: 100%; height: auto; object-fit: contain;}
 
+body.sub .sectionbox{}
 body.sub .sectionbox .section1{height: 690px; width: 80%; display: flex; margin: 130px auto 150px auto; position: relative;}
 body.sub .sectionbox .section1 .left{height: 100%; width: 30%; background: #0C2440; color: #fff; position: relative;}
 body.sub .sectionbox .section1 .left > span{font-size: 40px; font-weight: 500;}
