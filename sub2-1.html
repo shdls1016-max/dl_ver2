@@ -88,7 +88,7 @@
     <div class="sectionbox">
         <section class="section1">
             <div class="left">
-                <span>사업개요</span>
+                <strong>사업개요</strong>
                 <div class="withLine"><span>Lead Developer</span></div>
                 <p>대한민국 건설을 리드해온 DL이앤씨는 이제 종합설계시공(EPC)뿐만 아니라 토탈솔루션 사업자로서 도약합니다.</p>
 
@@ -101,10 +101,55 @@
             <div class="right">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide">1</div>
-                    <div class="swiper-slide">2</div>
-                    <div class="swiper-slide">3</div>
-                    <div class="swiper-slide">4</div>
+                    <div class="swiper-slide">
+                        <strong>건축</strong>
+                        <ul>
+                            <li>업무/상업</li>
+                            <li>문화/체육</li>
+                            <li>호텔/리조트</li>
+                            <li>교육/의료</li>
+                            <li>물류</li>
+                        </ul>
+                        <figure>
+                            <img src="images/sub2-1s1-1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <strong>주택</strong>
+                        <ul>
+                            <li>아파트</li>
+                            <li>주상복합</li>
+                            <li>재개발<span>/재건축/리모델링</span></li>
+                        </ul>
+                        <figure>
+                            <img src="images/sub2-1s1-2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <strong>토목</strong>
+                        <ul>
+                            <li>도로<span>/교통</span></li>
+                            <li>항만<span>/수자원</span></li>
+                            <li>철도<span>/지하철/터널</span></li>
+                            
+                        </ul>
+                        <figure>
+                            <img src="images/sub2-1s1-3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <strong>플랜트</strong>
+                        <ul>
+                            <li>정유<span>/가스</span></li>
+                            <li>석유화학</li>
+                            <li>에너지<span>/발전</span></li>
+                            <li>산업설비</li>
+                            <li>환경</li>
+                        </ul>
+                        <figure>
+                            <img src="images/sub2-1s1-4.png" alt="">
+                        </figure>
+                    </div>
                     </div>
                     <!-- <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div> -->
@@ -128,12 +173,9 @@
 
      <style>    /* index.html hero에도 다른 유형의 슬라이드있어서 html에 적은거임 */
     html,body {position: relative; height: 100%;}
-
-
     .swiper { width: 100%; height: 100%;}
-
     .swiper-slide { text-align: center; display: flex; justify-content: center; align-items: center;}
-
+    .swiper-slide ul::-webkit-scrollbar{display: none;}
 /*     @media (max-width: 760px) {
       .swiper-button-next {right: 20px; transform: rotate(90deg); border: 1px solid #000;}
       .swiper-button-prev {left: 20px; transform: rotate(90deg); border: 1px solid #000;}
@@ -152,17 +194,15 @@
   <!-- Initialize Swiper -->
   <script>
    var swiper = new Swiper('.swiper', {
-      slidesPerView: 2.5,
-      direction: getDirection(),
+      slidesPerView: 1,
+      allowTouchMove: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      on: {
-        resize: function () {
-          swiper.changeDirection(getDirection());
-        },
-      },
+      autoHeight:true,
+      watchOverflow:true
+      
     });
 
     function getDirection() {
