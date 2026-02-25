@@ -147,7 +147,8 @@ body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > fi
 body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > figure img{width: 100%; height: 100%; overflow: hidden; object-fit: cover; object-position: center;}
 
 
-body.sub .section2 .s2{width: 80%; height: 85vh; background: yellow; margin: 0 auto;}
+body.sub .section2 {display: flex; flex-direction: column; gap: 12vh;}
+body.sub .section2 .s2{width: 80%; height: 90vh; margin: 0 auto; }
 body.sub .section2 .s2 .s2Title{width: 100%; display: flex; position: relative;}
 body.sub .section2 .s2 .s2Title strong{}
 body.sub .section2 .s2 .s2Title .withHr{position: absolute; display: flex; align-items: center; top: 50%; right: 0; width:70vw; gap: 10px; border-top: 1px solid #111; justify-content: end; padding-top: 4px;}
@@ -155,17 +156,18 @@ body.sub .section2 .s2 .s2Title .withHr span{font-size: clamp(18px,1.4vw,30px); 
 body.sub .section2 .s2 .s2Title .withHr figure {width: clamp(18px,1.6vw,32px); height: clamp(18px,1.4vw,30px); }
 body.sub .section2 .s2 .s2Title .withHr figure img{width: 100%; height: 100%; object-fit: contain; object-position: center;}
 
-body.sub .section2 .s2 .s2Content{width: 100%; height: auto; display: flex; gap: 4%; flex: 1; margin-top: 10vh;}
-body.sub .section2 .s2 .s2Content .left{width: 50%;}
+body.sub .section2 .s2 .s2Content{width: 100%; height: auto; display: grid; grid-template-columns: repeat(2,48%); gap: 4%;  margin-top: 8vh;}
+body.sub .section2 .s2 .s2Content .left{}
 body.sub .section2 .s2 .s2Content .left ul{width: 100%;}
-body.sub .section2 .s2 .s2Content .left ul li{width: 100%; padding: 30px 0 10px 24px; border: 1px solid #000;}
-body.sub .section2 .s2 .s2Content .left ul li span{font-size: clamp(18px,1.4vw,30px); font-weight: 300; letter-spacing: -0.06em; margin-bottom: 10px;}
-body.sub .section2 .s2 .s2Content .left ul li .ex{width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: -0.06em;}
+body.sub .section2 .s2 .s2Content .left ul li{width: 100%; padding: 30px 24px 10px 24px; border-bottom: 1px solid #E8E8E8; box-sizing: border-box;}
+body.sub .section2 .s2 .s2Content .left ul li:first-child{padding-top: 0;}
+body.sub .section2 .s2 .s2Content .left ul li span{font-size: clamp(18px,1.4vw,30px); font-weight: 300; letter-spacing: -0.06em;}
+body.sub .section2 .s2 .s2Content .left ul li .ex{width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: -0.06em; margin-top: 7px;}
 
-body.sub .section2 .s2 .s2Content .right{width: 50%; height: auto;}
-body.sub .section2 .s2 .s2Content .right img{width: 100%; height: auto; object-fit: cover; object-position: center;}
+body.sub .section2 .s2 .s2Content .right{width: 100%; height: 100%;}
+body.sub .section2 .s2 .s2Content .right img{width: 100%; height: 100%; object-fit: cover; object-position: center;}
 
-
+body.sub footer{margin-top: 22vh;}
 
 
 
