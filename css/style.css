@@ -139,10 +139,10 @@ body.sub .sectionbox .section1 .right .swiper .swiper-wrapper{height: 100%;}
 body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{display: flex; flex-direction: column; width: 49%; height: 100%; box-sizing: border-box; flex-shrink: 0; border: 1px solid graident(to bottom, #fff #111 #fff); position: relative;}
 body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide::after{content: ''; position: absolute; top: 7%; bottom: 7%; right: 0; width: 1px; background: linear-gradient(to bottom, rgba(156,156,156,0), #CECECE 50%, rgba(156,156,156,0));}
 body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide:last-child:after{display: none;}
-body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > strong{font-size: 30px; font-weight: 400; margin: clamp(40px, 4.6vw, 90px) auto 27px 20px;}
-body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > ul{display: flex; gap: clamp(12px,1.2vw,38px);  padding: 10px 20px; box-sizing: border-box;  border-top: 1px solid #000; border-bottom: 1px solid #000; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; touch-action: pan-x; min-height: 42px; flex-shrink: 0;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > strong{font-size: clamp(20px,1.4vw,30px); font-weight: 400; margin: clamp(40px, 4.6vw, 90px) auto 27px 20px;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > ul{display: flex; gap: clamp(12px,1.2vw,38px);  padding: 10px 20px; box-sizing: border-box;  border-top: 1px solid #111;   border-bottom: 1px solid #111;    width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; touch-action: pan-x; min-height: 42px; flex-shrink: 0;}
 
-body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > ul > li{font-size: 15px; font-weight: 300; white-space: nowrap;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > ul > li{font-size: clamp(13px,0.78vw,15px); font-weight: 300; white-space: nowrap;}
 body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > figure{width: 100%; height: 60%; flex: 1; overflow: hidden; min-height: 0;}
 body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > figure img{width: 100%; height: 100%; overflow: hidden; object-fit: cover; object-position: center;}
 
@@ -151,7 +151,7 @@ body.sub .section2 {display: flex; flex-direction: column; gap: 12vh;}
 body.sub .section2 .s2{width: 80%; height: 90vh; margin: 0 auto; }
 body.sub .section2 .s2 .s2Title{width: 100%; display: flex; position: relative;}
 body.sub .section2 .s2 .s2Title strong{}
-body.sub .section2 .s2 .s2Title .withHr{position: absolute; display: flex; align-items: center; top: 50%; right: 0; width:70vw; gap: 10px; border-top: 1px solid #111; justify-content: end; padding-top: 4px;}
+body.sub .section2 .s2 .s2Title .withHr{position: absolute; display: flex; align-items: center; top: 50%; right: 0; width:70vw; gap: 10px; border-top: 1px solid #111; justify-content: end; padding-top: clamp(4px,0.5vw,12px);}
 body.sub .section2 .s2 .s2Title .withHr span{font-size: clamp(18px,1.4vw,30px);  line-height: 1; }
 body.sub .section2 .s2 .s2Title .withHr figure {width: clamp(18px,1.6vw,32px); height: clamp(18px,1.4vw,30px); }
 body.sub .section2 .s2 .s2Title .withHr figure img{width: 100%; height: 100%; object-fit: contain; object-position: center;}
@@ -173,7 +173,19 @@ body.sub footer{margin-top: 22vh;}
 
 
 
+@media screen and (max-width:1250px) {
+body.sub .sectionbox .section1{height:70vh;}
+body.sub .sectionbox .section1 .left{height: auto;}
+body.sub .sectionbox .section1 .left .withLine{display: none;}
+body.sub .sectionbox .section1 .left > p{display: none;}
+body.sub .sectionbox .section1 .left > .slideBtn{left:clamp(10px,1.4vw,40px); right: auto; bottom: auto; margin-top: 20px;}
 
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{width: 80%;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > ul{display: none;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide > figure{border-top: 1px solid #0C2440;}
+
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide::after{top: 2%; bottom: 2%;}
+}
 
 
 @media screen and (max-width:1100px) {
@@ -233,14 +245,14 @@ body.sub footer{margin-top: 22vh;}
 
 
     .section2{flex-wrap: wrap; justify-content: center;}  
-    .section2 .left{width: 100%; justify-content: center; padding: 10% 0;}
-    .section2 .left ul li{gap: 5%;}
-     .section2 .left ul li figure{flex:0 0 20%; height: auto;}
+    .section2 > .left{width: 100%; justify-content: center; padding: 10% 0;}
+    .section2 > .left ul li{gap: 5%;}
+     .section2 > .left ul li figure{flex:0 0 20%; height: auto;}
 
-    .section2 .right{width: 100%; display: flex; flex-direction: column; align-items: center; height: auto; padding: 10% 0;}
-    .section2 .right .s2rtitle{text-align: center; margin: 0; margin-bottom: 25px;}
-    .section2 .right ul{display: flex; flex-direction: column; align-items: center; width: 80%;}
-    .section2 .right ul li{height: auto; width: 100%; padding: 4%;}
+    .section2 > .right{width: 100%; display: flex; flex-direction: column; align-items: center; height: auto; padding: 10% 0;}
+    .section2 > .right .s2rtitle{text-align: center; margin: 0; margin-bottom: 25px;}
+    .section2 > .right ul{display: flex; flex-direction: column; align-items: center; width: 80%;}
+    .section2 > .right ul li{height: auto; width: 100%; padding: 4%;}
 
 /* .section2 .right{width: 50vw; height: 685px; background:#0C2440; color: #f4f4f4;}
 .section2 .right .s2rtitle{font-size: 40px; font-weight: 400; margin: 90px 0 25px 127px; }
@@ -257,7 +269,28 @@ body.sub footer{margin-top: 22vh;}
     
 
 
+
+
+/* --------------------------sub2-1----------------------- */
+body.sub .section2 .s2 .s2Title .withHr{width:66vw;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{}
+body.sub .sectionbox .section1{}
+
+
+
+
 }  
+
+
+@media screen and (max-width:930px) {
+body.sub .sectionbox .section1{height:64vh;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{width: 90%;}
+
+body.sub .section2 .s2{height: auto;}
+body.sub .section2 .s2 .s2Title .withHr{width:64vw;}
+body.sub .section2 .s2 .s2Content{grid-template-columns: repeat(1,100%);}
+body.sub .section2 .s2 .s2Content .right{display: none;}
+}
 
 
 
@@ -283,9 +316,9 @@ body.sub footer{margin-top: 22vh;}
     .section1 .text_set p{font-size: 16px; letter-spacing: -0.02em;  width: 100%; line-height: 1.6; }
     .section1 .text_set p:last-of-type{margin-bottom: 2.2vw;}
 
-    .section2 .left{height: auto; padding: 10% 0;}
+    .section2 > .left{height: auto; padding: 10% 0;}
     .section2 .left ul{width: 80%;}
-    .section2 .left ul li{width: 100%; display: flex; gap: 3%;}
+    .section2 > .left ul li{width: 100%; display: flex; gap: 3%;}
     .section2 .left ul li figure{flex:0 0 24%; height: auto;}
     .section2 .left ul li figure img{width: 100%; height: auto;}
     .section2 .left ul li .s2ltext{flex: 1;}
@@ -308,6 +341,25 @@ body.sub footer{margin-top: 22vh;}
     footer{flex-direction: column; align-items: center;}
     footer > img{width: 76px; height:auto;}
     footer > p{font-size: 12px;}
+
+
+
+
+
+/* --------------------------sub2-1----------------------- */
+body.sub .sectionbox .section1{height:60vh;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{width: 94%;}
+
+
+body.sub .section2 .s2 .s2Title .withHr{width:60vw;}
+body.sub .section2 .s2 .s2Content .left ul li{padding-left: 4px;}
+
+
+
+
+
+
+
        
 }
 
@@ -315,7 +367,7 @@ body.sub footer{margin-top: 22vh;}
     .hero .herobox{display: none;}
     
     .section1 .text_set h3{font-size: 18px; font-weight: 400; display: inline-block; margin-bottom: 0.9vw;}
-    .section1 .text_set h3 span{font-size: 22px; font-weight: 600; color: #0C2440;}
+    .section1 .text_set h3 span{font-size: 22px; font-weight: 600; color: rgb(12, 36, 64);}
     .section1 .text_set p:first-of-type{display: none; }
     .section1 .text_set p:last-of-type{margin-bottom: 4vw;}
 
@@ -336,4 +388,28 @@ body.sub footer{margin-top: 22vh;}
     .section3 ul li figure{width: 74%; height: auto; margin: 0 auto;}
     .section3 ul li span.s3t{font-size: 20px;}
     .section3 ul li p{font-size: 16px;}
+
+
+
+
+
+
+
+/* ---------------------sub2-1------------------------ */
+.hero.sub2-1 > div{display: none;}
+
+body.sub .sectionbox .section1{height:60vh;}
+body.sub .sectionbox .section1 .left{display: flex; position: absolute; bottom: 0; width: 100%; background: rgba(12, 36, 64, 0.9); box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.4); width: fit-content; height: fit-content;}
+body.sub .sectionbox .section1 .left > strong{display: none;}
+
+body.sub .sectionbox .section1 .right{border: 1px solid rgba(12, 36, 64, 0.1); width: 100%;}
+body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{width: 94%;}
+
+body.sub .sectionbox .section1 .left > .slideBtn{position: relative; margin: 0; left: 0;}
+
+body.sub .section2 .s2 .s2Title strong{white-space: nowrap;}
+body.sub .section2 .s2 .s2Title .withHr{width:54vw; border-top: 0; position: relative;}
+body.sub .section2 .s2 .s2Content .left ul li .ex{display: none;}
+
+    
 }
