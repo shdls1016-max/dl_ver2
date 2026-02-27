@@ -15,7 +15,7 @@ body{font-family: "Noto Sans KR", sans-serif;}
 
 
 @keyframes blink {
-    0%, 100%{color: #cacaca;}
+    0%, 100%{color: rgba(255, 255, 255, 0.2);}
     50%{color: #fff;}
 }
 header .gnb li .lnb li a.effect{animation: blink 0.8s infinite;}
