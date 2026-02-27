@@ -14,6 +14,12 @@ body{font-family: "Noto Sans KR", sans-serif;}
 /* .gnb > li > a.ck{border-bottom: 1px solid #fff; box-sizing: border-box; position: relative;} */
 
 
+@keyframes blink {
+    0%, 100%{color: #cacaca;}
+    50%{color: #fff;}
+}
+header .gnb li .lnb li a.effect{animation: blink 0.8s infinite;}
+
 
 header{height: 102px; width: 100%; display: flex; align-items: center; box-sizing: border-box;
 position: absolute; z-index: 3; padding:0 4vw; gap: 20px;}
@@ -29,7 +35,7 @@ header .gnb > li > a{padding: 0 2vw; display: flex; position: relative;
 align-items: center; color: #fff; font-size: 18px; height: 100%; white-space: nowrap;}
 header .gnb li .lnb{position: absolute; top: 100px; height: 0; overflow: hidden; transition: 0.3s;} 
 header .gnb li .lnb li{padding: 10px 0; width: 100%; text-align: center;}
-header .gnb li .lnb li a{color: #CACACA; font-size: 16px; white-space: nowrap; border-bottom: 2px solid transparent; transition: .3s; }
+header .gnb li .lnb li a{color: #CACACA; font-size: 16px; white-space: nowrap; border-bottom: 2px solid transparent; transition: .3s;}
 
 
 header .gnb:hover li a{color:#cacaca; transition: 0.2s; }
