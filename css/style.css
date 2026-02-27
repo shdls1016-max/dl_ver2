@@ -205,7 +205,7 @@ body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide::aft
     header .nav .gnb{opacity: 0;}
     header.on .nav .gnb{flex-direction: column; align-items: start; height: auto; margin-top: 20px; padding: 0 1.5rem; opacity: 1;}
     header.on .nav .gnb > li{height: auto;}
-    header.on .nav .gnb > li > a{display: block; padding: 18px 0; color: #fff; font-size: 18px; height: auto; width: 100%;}
+    header.on .nav .gnb > li > a{display: block; padding: 18px 0; color: #fff; font-size: 18px; height: auto; width: 100%; border: 0;}
 
     header .gnb:hover li .lnb {height: auto; width: 100%;}
     header.on .nav .gnb > li .lnb{position: relative; top: 0; height: auto; max-height: 0; overflow: hidden; transition:max-height 0.4s ease; background: transparent; margin-left: 10px;}
@@ -277,7 +277,7 @@ body.sub .sectionbox .section1 .right .swiper .swiper-wrapper .swiper-slide{}
 body.sub .sectionbox .section1{}
 
 
-
+header.on .gnb > li > a.ck{border-bottom: 0px solid #BAC8D8; box-sizing: border-box; }
 
 }  
 
